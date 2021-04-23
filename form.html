@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+body{
+    text-align: center;
+    background-color:rgb(158, 209, 226);
+}
+form{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 15px;
+}
+.show-sender, .personalize-painting, .auto-generate-painting, .preview, .submit{
+    display:none;
+}
+</style>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        <h1>Send a meaningful art piece to your loved one!</h1>
+        <label for="personalized-generator">Select whether you want to personalize or auto-generate an art message</label><br>
+        <input type="radio" id="personalize" name="pg-option" value="personalize" onclick="personal()">
+        <label for="stock_ticker">Personalize</label><br>
+        <input type="radio" id="generator" name="pg-option" value="generator" onclick="generate()">
+        <label for="company_name">Auto-Generate</label><br>
+        <br>
+
+        <label for="sender">Select whether you want to stay anonymous:</label><br>
+        <input type="radio" id="anonymous" name="anon" value="anonymous" onclick="no_sender_info()">
+        <label for="stock_ticker">Yes</label><br>
+        <input type="radio" id="non-anonymous" name="anon" value="non-anonymous" onclick="sender_info()">
+        <label for="company_name">No</label><br><br>
+        
+        <div class="show-sender">
+            <label for="sender_name">Your's Name:</label>
+            <input type="text" id="sender_name" name="sender_name"><br><br>
+        </div>
+
+        <label for="recipient-name">Recipient's Name:</label>
+        <input type="text" id="recipient-name" name="recipient-name"><br><br>
+        <label for="email">Recipient's Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="message">Send a personalized message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50">
+        </textarea><br><br>
+    
+        <div class="personalize-painting">
+            <label for="personalize_painting_text">Send this special painting:</label>
+            <input type="text" id="personalize_painting_text" name="personalize_painting_text"><br><br>
+        </div>
+
+        <div class="auto-generate-painting">
+            <label for="type">Select Genre:</label><br>
+            <select name="genre" id="genre">
+                <option value="1">Genre 1</option>
+                <option value="2">Genre 2</option>
+                <option value="3">Genre 3</option>
+                <option value="4">Genre 4</option>
+            </select>
+            <br><br>
+            <label for="type">Select Medium:</label><br>
+            <select name="medium" id="medium">
+                <option value="1">Medium 1</option>
+                <option value="2">Medium 2</option>
+                <option value="3">Medium 3</option>
+                <option value="4">Medium 4</option>
+            </select>
+            <br><br>
+            <label for="type">Select ---:</label><br>
+            <select name="---" id="---">
+                <option value="1">--- 1</option>
+                <option value="2">--- 2</option>
+                <option value="3">--- 3</option>
+                <option value="4">--- 4</option>
+            </select>
+            <br><br>
+        </div>
+        <div class="preview"></div>
+            <button>View a preview of the painting</button>
+        </div>
+        <br><br>
+        <div class="submit"></div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+<script> 
+    function personal(){
+        document.getElementsByClassName("personalize-painting")[0].style.display = 'block';
+        document.getElementsByClassName("auto-generate-painting")[0].style.display = 'none';
+        document.getElementsByClassName("preview")[0].style.display = 'block';
+        document.getElementsByClassName("submit")[0].style.display = 'block';
+    }
+    function generate(){
+        document.getElementsByClassName("personalize-painting")[0].style.display = 'none';
+        document.getElementsByClassName("auto-generate-painting")[0].style.display = 'block';
+        document.getElementsByClassName("preview")[0].style.display = 'block';
+        document.getElementsByClassName("submit")[0].style.display = 'block';
+    }
+    function sender_info(){
+        document.getElementsByClassName("show-sender")[0].style.display = 'block';
+    }
+    function no_sender_info(){
+        document.getElementsByClassName("show-sender")[0].style.display = 'none';
+    }
+</script>
+</html>
+
