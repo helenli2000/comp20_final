@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
+<style>
 body{
+    background-color:#ffffff;
     text-align: center;
-    background-color:rgb(158, 209, 226);
 }
+
+.main-logo{
+    float: center;
+    width:150px; 
+    height:50px;
+}
+
+.header{
+    text-align:center;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(129, 206, 230);
+    width: 100%;
+}
+  
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.navbar a:hover {
+    background: #f2f2f2;
+    color: black;
+}
+
 form{
     display: inline-block;
     border: 2px solid black;
@@ -15,9 +46,42 @@ form{
 .show-sender, .personalize-painting, .auto-generate-painting, .preview, .submit{
     display:none;
 }
+
+.footer{
+    background-color:rgb(129, 206, 230);
+    color:#f2f2f2;
+    height: 260px;
+}
+
+.footer p{
+    margin-left: 30px;
+/*     padding: 5px; */
+    font-size: 13px;
+    color:#000000;
+}
+
+.footer a{
+    margin-left: 30px;
+/*     padding: 5px; */
+    font-size: 13px;
+    text-decoration: none;
+    color: #000000;
+}
 </style>
 </head>
 <body>
+    <div class="header">
+        <a href="homepage.html"><img src="afternoontea.jpg" alt="Art Gallary" class="main-logo"></a>
+    </div>
+
+    <div class="navbar">
+        <a href="homepage.html">About Us</a>
+        <a href="gallary.html">Gallary of Art (Genre, Medium, etc)</a>
+        <a href="form.html">Send Painting Memories (Form)</a>
+    </div>
+
+    <br>
+
     <form onsubmit="return validateForm()">
         <h1>Send a meaningful art piece to your loved one!</h1>
         <label for="personalized-generator">Select whether you want to personalize or auto-generate an art message</label><br>
@@ -86,6 +150,16 @@ form{
         </div>
     </form>
 </body>
+<footer class="footer">
+    <br>
+    <p><b>The Slice</b></p>
+    <p>Harvard Square</p>
+    <p>3 Brattle Street</P>
+    <p>Cambridge, MA 02138</p><br>
+    <a href="tel:8573218430">(857)-321-8430</a><br>
+    <a href= "mailto:info@theslice.com">info@theslice.com</a>
+ </footer>
+
 <script> 
     function personal(){
         document.getElementsByClassName("personalize-painting")[0].style.display = 'block';
