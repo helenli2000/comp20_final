@@ -44,7 +44,7 @@ form{
     padding: 15px;
 }
 .show-sender, .personalize-painting, .auto-generate-painting, .preview, .submit{
-    display:none;
+    display: none;
 }
 
 .footer{
@@ -76,8 +76,8 @@ form{
 
     <div class="navbar">
         <a href="homepage.html">About Us</a>
-        <a href="gallary.html">Gallary of Art (Genre, Medium, etc)</a>
-        <a href="form.html">Send Painting Memories (Form)</a>
+        <a href="gallary.html">Gallary of Art </a>
+        <a href="form.html">Send Painting Memories</a>
     </div>
 
     <br>
@@ -98,7 +98,7 @@ form{
         <label for="company_name">No</label><br><br>
         
         <div class="show-sender">
-            <label for="sender_name">Your's Name:</label>
+            <label for="sender_name">Your Name:</label>
             <input type="text" id="sender_name" name="sender_name"><br><br>
         </div>
 
@@ -141,11 +141,11 @@ form{
             </select>
             <br><br>
         </div>
-        <div class="preview"></div>
+        <div class="preview">
             <button>View a preview of the painting</button>
         </div>
         <br><br>
-        <div class="submit"></div>
+        <div class="submit">
             <input type="submit" value="Submit">
         </div>
     </form>
@@ -178,6 +178,72 @@ form{
     }
     function no_sender_info(){
         document.getElementsByClassName("show-sender")[0].style.display = 'none';
+    }
+    function validateForm(){
+        if(document.getElementById('personalize').checked) {
+            if(document.getElementById('non-anonymous').checked){
+                if(document.getElementById('sender_name').value == ""){
+                    alert("Please enter information into the textbox");
+                    return false;
+                }
+                else{
+                    if(document.getElementById('email').value == ""){
+                        alert("Please enter receipt's email");
+                        return false;
+                    }
+                    else{
+                        if(document.getElementById('personalize_painting_text').value == ""){
+                            alert("Please enter name of painting to send");
+                            return false;
+                        }
+                        else{
+                            return true;
+                        }
+                    }
+                }
+            }
+            else{
+                if(document.getElementById('email').value == ""){
+                        alert("Please enter receipt's email");
+                        return false;
+                }
+                else{
+                        if(document.getElementById('personalize_painting_text').value == ""){
+                            alert("Please enter name of painting to send");
+                            return false;
+                        }
+                        else{
+                            return true;
+                        }
+                }
+            }
+        }
+        if(document.getElementById('generator').checked) {
+            if(document.getElementById('non-anonymous').checked){
+                if(document.getElementById('sender_name').value == ""){
+                    alert("Please enter information into the textbox");
+                    return false;
+                }
+                else{
+                    if(document.getElementById('email').value == ""){
+                        alert("Please enter receipt's email");
+                        return false;
+                    }
+                    else{
+                        return true;
+                    }
+                }
+            }
+            else{
+                if(document.getElementById('email').value == ""){
+                        alert("Please enter receipt's email");
+                        return false;
+                }
+                else{
+                    return true;
+                }
+            }
+        }
     }
 </script>
 </html>
