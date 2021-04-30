@@ -4,12 +4,13 @@
 <style> 
 body{
     background-color:#ffffff;
+    font-family: "Papyrus";
+    font-size: 1.5rem;
 }
 
 .main-logo{
     float: center;
-    width:150px; 
-    height:50px;
+    height:100px; 
 }
 
 .header{
@@ -20,11 +21,12 @@ body{
     overflow: hidden;
     background-color: rgb(129, 206, 230);
     width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
   
 .navbar a {
-    float: left;
-    display: block;
+    display: inline-block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
@@ -36,11 +38,15 @@ body{
     color: black;
 }
 
+.description{
+    text-align:center;
+}
+
 * {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
-  width: 500px;
+  width: 700px;
   position: relative;
   margin: auto;
 }
@@ -76,17 +82,6 @@ body{
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
 }
 
 /* The dots/bullets/indicators */
@@ -126,20 +121,18 @@ body{
 .footer{
     background-color:rgb(129, 206, 230);
     color:#f2f2f2;
-    height: 260px;
+    height: 325px;
 }
 
 .footer p{
     margin-left: 30px;
-/*     padding: 5px; */
-    font-size: 13px;
+    font-size:1rem;    
     color:#f2f2f2;
 }
 
 .footer a{
     margin-left: 30px;
-/*     padding: 5px; */
-    font-size: 13px;
+    font-size:1rem;
     text-decoration: none;
     color: #f2f2f2;
 }
@@ -147,7 +140,7 @@ body{
 </head>
 <body>
     <div class="header">
-        <a href="homepage.html"><img src="afternoontea.jpg" alt="Art Gallary" class="main-logo"></a>
+        <a href="homepage.html"><img src="/Users/Helen/Desktop/comp20/comp20_final/artILY_logo.png" alt="Art Gallary" class="main-logo"></a>
     </div>
 
     <div class="navbar">
@@ -155,24 +148,21 @@ body{
       <a href="gallary.html">Gallary of Art </a>
       <a href="form.html">Send Painting Memories</a>
     </div>
-
+    <br>
     <!-- Slideshow container -->
     <div class="slideshow-container">
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
-        <img style="height: 400px;" src="https://www.artic.edu/iiif/2/1753b638-d4fb-8e45-3db9-92dde7f053da/full/843,/0/default.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
+        <img style="height: 400px;" src="https://www.artic.edu/iiif/2/33115537-53c1-840b-5e74-07cb07c7b05d/full/843,/0/default.jpg" style="width:100%">
         </div>
     
         <div class="mySlides fade">
-        <img style="height: 400px;" src="https://www.artic.edu/iiif/2/b55d836c-ee20-59f8-1f0c-a95e09905361/full/843,/0/default.jpg" style="width:100%">
-        <div class="text">Caption Two</div>
+        <img style="height: 400px;" src="https://www.artic.edu/iiif/2/a76844cc-cec8-6026-5609-50d3961aed4c/full/843,/0/default.jpg" style="width:100%">
         </div>
     
         <div class="mySlides fade">
-        <img style="height: 400px;" src="https://www.artic.edu/iiif/2/ab107179-7106-937e-7676-e0263b02e530/full/843,/0/default.jpg" style="width:100%">
-        <div class="text">Caption Three</div>
+        <img style="height: 400px;" src="https://www.artic.edu/iiif/2/8317e653-b0eb-3ba3-1886-3141db56f529/full/843,/0/default.jpg" style="width:100%">
         </div>
     
         <!-- Next and previous buttons -->
@@ -200,10 +190,10 @@ body{
     <p><b>ArtILY</b></p>
     <p>Harvard Square</p>
     <p>3 Brattle Street</P>
-    <p>Cambridge, MA 02138</p><br>
+    <p>Cambridge, MA 02138</p>
     <a href="tel:8573218430">(857)-321-8430</a><br>
     <a href= "mailto:info@theslice.com">info@theartily.com</a>
- </footer>
+</footer>
 <script> 
 var slideIndex = 1;
 showSlides(slideIndex);
