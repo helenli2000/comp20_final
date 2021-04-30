@@ -6,6 +6,7 @@ body{
     background-color:#ffffff;
     text-align: center;
     font-family: "Papyrus";
+    font-size: 1.5rem;
 }
 
 .main-logo{
@@ -22,11 +23,12 @@ body{
     overflow: hidden;
     background-color: rgb(129, 206, 230);
     width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
   
 .navbar a {
-    float: left;
-    display: block;
+    display: inline-block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
@@ -51,22 +53,20 @@ form{
 .footer{
     background-color:rgb(129, 206, 230);
     color:#f2f2f2;
-    height: 260px;
+    height: 325px;
 }
 
 .footer p{
     margin-left: 30px;
-/*     padding: 5px; */
-    font-size: 13px;
-    color:#000000;
+    font-size:1rem;    
+    color:#f2f2f2;
 }
 
 .footer a{
     margin-left: 30px;
-/*     padding: 5px; */
-    font-size: 13px;
+    font-size:1rem;
     text-decoration: none;
-    color: #000000;
+    color: #f2f2f2;
 }
 </style>
 </head>
@@ -149,6 +149,7 @@ form{
             <input type="submit" value="Submit">
         </div>
     </form>
+    <p></p>
 </body>
 <footer class="footer">
     <br>
