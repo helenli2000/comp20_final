@@ -93,8 +93,12 @@
         h3{
             /* background-color:#ffffff; */
             font-family: "Papyrus";
-            /* font-size: 1.5rem; */
+            font-size: 18px;
         }
+		
+		li{
+			font-size: 15px;
+		}
         
         art-info{
             /* background-color:#ffffff; */
@@ -110,6 +114,11 @@
             margin-left: 100px;
             text-align: center;
         }
+		
+		.card img{
+			width: auto;
+			height: 250px;
+		}
 		
 	</style>
 	
@@ -153,7 +162,7 @@
                     "</div></div>";
             
 				if ((i + 1) % 4 == 0) {
-					results += "</div>";
+					results += "</div><br>";
 				}
 			}
 			display.innerHTML = results;
